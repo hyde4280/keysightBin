@@ -59,7 +59,7 @@ def readfile(binFile, arg):
                     elif bufferHeader.bufferType == 5:
                         fmt = "%dB" % (header.nPoints)
                     else:
-                        fmt = "%dB" % (header.bufferSize)
+                        fmt = "%dB" % (bufferHeader.bufferSize)
                     data = np.asarray(struct.unpack(
                         fmt, fd.read(struct.calcsize(fmt))))
                 else:
